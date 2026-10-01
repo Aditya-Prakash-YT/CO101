@@ -3,13 +3,15 @@
 #include <stdio.h>
 
 void main () {
-    char string;
+    char string[] = "Hello World !";
 
-    printf("Enter a string : ");
-    scanf("%c", &string);
+    printf("Given String : ");
 
+    int len = sizeof(string)/sizeof(string[0]);
+    for (int i = 0; i < len; i++) {
+        printf("%c", string[i]);
+    }
 
-    //for now
-    printf("%c", string);
-
+    printf("\n> Length of the given string : %d\n",len);
+    
 }
