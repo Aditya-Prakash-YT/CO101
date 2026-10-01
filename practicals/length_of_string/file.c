@@ -22,4 +22,3 @@ void main () {
 
     printf("\n> Length of the given string : %d\n",length);
 }
-
