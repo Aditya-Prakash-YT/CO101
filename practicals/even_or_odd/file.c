@@ -1,0 +1,18 @@
+// Aditya Prakash Singh (26/A14/005)
+
+#include <stdio.h>
+
+int main () {
+
+    int number;
+    printf("Enter a number :");
+    scanf("%d", &number);
+
+    if (number != 1 && number%2 == 0 ) {
+        printf("the number is even \n");
+    } else {
+        printf("the number is odd \n");
+    }
+
+    return 0;
+}
