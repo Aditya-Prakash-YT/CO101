@@ -2,16 +2,23 @@
 
 #include <stdio.h>
 
+#define WORD_LIMIT 4096
+
 void main () {
-    char string[] = "Hello World !";
+    char string[WORD_LIMIT];
 
-    printf("Given String : ");
+    printf("Enter a String : ");
+    scanf("%s", string);
 
-    int len = sizeof(string)/sizeof(string[0]);
-    for (int i = 0; i < len; i++) {
-        printf("%c", string[i]);
+    int length = 0;
+
+    for (int i = 0; i < WORD_LIMIT; i++) {
+
+        if (string[i] == '\0')
+            break;
+        else
+            length += 1;
     }
 
-    printf("\n> Length of the given string : %d\n",len);
-    
+    printf("\n> Length of the given string : %d\n",length);
 }
