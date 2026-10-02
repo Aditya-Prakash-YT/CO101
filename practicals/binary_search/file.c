@@ -22,7 +22,7 @@ int main() {
 
     while (low <= high) {
 
-        mid = low + (high - low) / 2;
+        mid = ((high - low) / 2) + low ;
 
         if (array[mid] == target) {
             printf( "Target element %d was found in the array at index : %d\n", target, mid );
