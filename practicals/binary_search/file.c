@@ -2,32 +2,35 @@
 
 #include <stdio.h>
 
-void main () {
+int main() {
 
-    int array[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+    int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+
+    int len = sizeof(array) / sizeof(array[0]);
 
     printf("Given Array : [");
 
-    for (int i = 0; i < sizeof(array) / sizeof(array[0]); i++) {
-        printf("%d, ",array[i]);
+    for (int i = 0; i < len; i++) {
+        printf("%d, ", array[i]);
     }
 
-    printf("] \n");
+    printf("]\n");
 
+    int high = len - 1, low = 0, mid, target;
 
-
-    int high, low, mid ,target;
-    bool found = false;
-    
     printf("Enter Target value : ");
     scanf("%d", &target);
-    
-    while (low <= high && !found) {
+
+    while (low <= high) {
+
         mid = low + (high - low) / 2;
 
         if (array[mid] == target) {
-            printf("Target element %d was found in the array at index : \n", target, mid);
-            found = true;
+            printf(
+                "Target element %d was found in the array at index : %d\n",
+                target, mid
+            );
+            return 0;
         }
         else if (array[mid] < target) {
             low = mid + 1;
@@ -37,8 +40,10 @@ void main () {
         }
     }
 
-    if (!found) {
-        printf("Target element %d was not found in the array\n", target);
-    }
+    printf(
+        "Target element %d was not found in the array\n",
+        target
+    );
 
+    return 0;
 }
