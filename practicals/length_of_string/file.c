@@ -10,15 +10,22 @@ void main () {
     printf("Enter a String : ");
     scanf("%s", string);
 
-    int length = 0;
+    int i = 0;
 
-    for (int i = 0; i < WORD_LIMIT; i++) {
-
-        if (string[i] == '\0')
-            break;
-        else
-            length += 1;
+    while( string[i] != '\0'  ){
+        i ++;
     }
 
-    printf("\n> Length of the given string : %d\n",length);
+    // for (int i = 0; i < WORD_LIMIT; i++) {
+
+    //     if (string[i] == '\0')
+    //         break;
+    //     else
+    //         length += 1;
+    // }
+
+    printf("\n> Length of the given string : %d\n", i);
 }
+
+
+// hello World
