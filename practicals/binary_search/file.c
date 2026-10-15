@@ -7,14 +7,6 @@ int main() {
     int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
     int len = sizeof(array) / sizeof(array[0]);
 
-    printf("Given Array : [");
-
-    for (int i = 0; i < len; i++) {
-        printf("%d, ", array[i]);
-    }
-
-    printf("]\n");
-
     int high = len - 1, low = 0, mid, target;
 
     printf("Enter Target value : ");
