@@ -12,7 +12,6 @@ int reverseANumber (int number) {
     return reversedNumber;
 }
 
-
 void main() {
 
     int number;
