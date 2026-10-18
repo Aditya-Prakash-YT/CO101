@@ -12,31 +12,40 @@ int wordLength(char string[]) {
     return length;
 } 
 
-
-char reverseTheWord (char string[]) {
+void reverseTheWord(char string[], char gnirts[]) {
     int length = wordLength(string);
 
-    char gnirts[length];
-
     for (int i = 0; i < length; i++) {
-        printf("%d",(length-i-1));
-
-        gnirts[i] = string[length-i-1];
+        gnirts[i] = string[length - i - 1];
     }
 
-    return gnirts;
+    gnirts[length] = '\0';
 }
 
+
 void main () {
-    
+
     char text[WORD_LIMIT];
+    char txet[WORD_LIMIT];
 
     printf("Enter the word (word limit : %d) : ", WORD_LIMIT);
     scanf("%s", text);
 
+    reverseTheWord(text, txet);
 
-    char txet[WORD_LIMIT] = reverseTheWord(text);
+    int same = 1;
 
+    for (int i = 0; text[i] != '\0'; i++) {
+        if (text[i] != txet[i]) {
+            same = 0;
+            break;
+        }
+    }
 
-
+    if (same) {
+        printf("The given word is a palindrome.\n");
+    } else {
+        printf("The given word is not a palindrome.\n");
+    }
+    
 }
