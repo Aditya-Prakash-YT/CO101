@@ -17,7 +17,7 @@ void main() {
     int number;
 
     printf("Enter a Number to check : ");
-    scanf("%d",&number);
+    scanf("%d", &number);
 
     if (number == reverseANumber(number)) {
         printf("The number %d is a palimdrone \n", number);

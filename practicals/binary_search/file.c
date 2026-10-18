@@ -4,25 +4,26 @@
 
 int main() {
 
-    int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+    int array[] = { 5, 10, 12, 18, 23, 30, 40 };
     int len = sizeof(array) / sizeof(array[0]);
 
-    int high = len - 1, low = 0, mid, target;
+    int up = len - 1, down = 0, mid, target;
 
+    printf("The Given Array : [ 5, 10, 12, 18, 23, 30, 40 ] \n");
     printf("Enter Target value : ");
     scanf("%d", &target);
 
-    while (low <= high) {
+    while (down <= up) {
 
-        mid = ((high - low) / 2) + low ;
+        mid = ((up - down) / 2) + down ;
 
         if (array[mid] == target) {
             printf( "Target element %d was found in the array at index : %d\n", target, mid );
             return 0;
         } else if (array[mid] < target) {
-            low = mid + 1;
+            down = mid + 1;
         } else {
-            high = mid - 1;
+            up = mid - 1;
         }
     }
 

@@ -16,16 +16,6 @@ void main () {
         i ++;
     }
 
-    // for (int i = 0; i < WORD_LIMIT; i++) {
-
-    //     if (string[i] == '\0')
-    //         break;
-    //     else
-    //         length += 1;
-    // }
-
     printf("\n> Length of the given string : %d\n", i);
 }
 
-
-// hello World
