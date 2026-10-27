@@ -18,7 +18,7 @@ int main () {
 
     printf("Enter the first string (word limit : %d) : ", WORD_LIMIT);
     scanf("%s", text1);
-
+    
     printf("Enter the second string (word limit : %d) : ", WORD_LIMIT);
     scanf("%s", text2);
 
@@ -40,6 +40,5 @@ int main () {
     } else {
         printf("The given strings are different. \n");
     }
-    
     return 0;
 }
