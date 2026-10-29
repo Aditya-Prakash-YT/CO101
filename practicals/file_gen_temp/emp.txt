@@ -1,0 +1,3 @@
+Name : Aditya
+Age : 18
+Salary : 9999999.00
